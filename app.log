@@ -1,0 +1,17 @@
+
+2025-07-20 01:17:33,113 [ERROR] Main: 
+Task created successfully with ID : 7
+2025-07-20 01:18:51,545 [ERROR] Main: 
+Task created successfully with ID : 8
+2025-07-20 01:31:38,372 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 02:03:58,728 [ERROR] Main: Create task function failure server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2025-07-20 02:04:54,455 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 02:05:33,360 [INFO] Main: Task created successfully with ID : 9
+2025-07-20 20:00:08,122 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 20:07:23,897 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
