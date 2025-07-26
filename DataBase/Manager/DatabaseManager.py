@@ -4,7 +4,7 @@ import psycopg2
 import threading
 from dotenv import load_dotenv
 import os
-import logging
+
 
  
 class DatabaseManager:
@@ -50,16 +50,13 @@ class DatabaseManager:
             self.logger.error(f"Error occured while creating connection to DB {db_name}, Error : {e}")
             return connection
 
-
-
     def create_tables(self):
         with self.lock:
             cursor = self.conn.cursor()
-
-
-            #Tasks table
-            cursor.execute('''
-                            CREATE TABLE IF NOT EXISTS tasks(
+            try:
+                #Tasks table
+                cursor.execute('''
+                               CREATE TABLE IF NOT EXISTS tasks(
                                 task_id SERIAL PRIMARY KEY,
                                 title TEXT NOT NULL,
                                 description TEXT,
@@ -69,20 +66,23 @@ class DatabaseManager:
                                 due_date TEXT,
                                 created_at TEXT,
                                 completed_at TEXT
-                           )
-                            ''')
+                            )''')
             
 
-            #Comments table
-            cursor.execute('''
-                    CREATE TABLE IF NOT EXISTS comments (
-                        comment_id SERIAL PRIMARY KEY,
-                        task_id INTEGER REFERENCES tasks(task_id),
-                        comment TEXT,
-                        timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                    )
-                    ''')
+                #Comments table
+                cursor.execute('''
+                        CREATE TABLE IF NOT EXISTS comments (
+                            comment_id SERIAL PRIMARY KEY,
+                            task_id INTEGER REFERENCES tasks(task_id),
+                            comment TEXT,
+                            timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                        )
+                        ''')
             
-            self.conn.commit()
+                self.conn.commit()
 
+            except Exception as ex:
+                self.logger.error(f"Error occured while creating tables into DB, Error : {ex}")     
 
+            finally:
+                cursor.close()
