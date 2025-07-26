@@ -1,0 +1,27 @@
+
+2025-07-20 01:17:33,113 [ERROR] Main: 
+Task created successfully with ID : 7
+2025-07-20 01:18:51,545 [ERROR] Main: 
+Task created successfully with ID : 8
+2025-07-20 01:31:38,372 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 02:03:58,728 [ERROR] Main: Create task function failure server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+server closed the connection unexpectedly
+	This probably means the server terminated abnormally
+	before or while processing the request.
+
+2025-07-20 02:04:54,455 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 02:05:33,360 [INFO] Main: Task created successfully with ID : 9
+2025-07-20 20:00:08,122 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 20:07:23,897 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 21:56:22,870 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 23:29:12,499 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-20 23:30:26,106 [INFO] Main: Task created successfully with ID : 10
+2025-07-26 20:59:42,157 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-26 21:00:58,899 [INFO] Main: Task created successfully with ID : 11
+2025-07-26 21:59:20,092 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-26 22:24:23,934 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
+2025-07-26 22:50:23,943 [ERROR] DatabaseManager: Error occured while creating connection to DB postgres, Error : could not translate host name "Host Name" to address: No such host is known. 
+
+2025-07-26 22:51:13,908 [INFO] DatabaseManager: Connection to postgresSQL DB(postgres) Successful
